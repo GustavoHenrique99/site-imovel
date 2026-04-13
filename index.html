@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link rel="icon" href="img/logo.png" type="image/png">
     <title>Reis Consultoria Financeira</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -86,7 +86,8 @@
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(20, 0, 0, 0.8) 100%);
             background-size: cover;
             background-position: center;
-            padding: 80px 5% 60px 5%; /* INSERÇÃO CIRÚRGICA: Reduzido de 110px para 80px para subir a seção inteira */
+            padding: 80px 5% 60px 5%;
+            /* INSERÇÃO CIRÚRGICA: Reduzido de 110px para 80px para subir a seção inteira */
             /* Padding reduzido para subir tudo */
             display: flex;
             flex-wrap: wrap;
@@ -141,21 +142,29 @@
         /* INSERÇÃO CIRÚRGICA: Regras exclusivas para o PC (Equilibrando o design sem a grade) */
         @media (min-width: 769px) {
             .hero {
-                align-items: flex-start; /* INSERÇÃO CIRÚRGICA: Alterado de center para flex-start para remover o buraco no topo */
+                align-items: flex-start;
+                /* INSERÇÃO CIRÚRGICA: Alterado de center para flex-start para remover o buraco no topo */
             }
+
             .hero-content {
-                margin-top: 30px; /* INSERÇÃO CIRÚRGICA: Alinha perfeitamente o texto com a caixa do formulário */
+                margin-top: 30px;
+                /* INSERÇÃO CIRÚRGICA: Alinha perfeitamente o texto com a caixa do formulário */
             }
+
             .hero h1 {
-                font-size: 52px; /* Título maior e imponente */
+                font-size: 52px;
+                /* Título maior e imponente */
                 margin-bottom: 20px;
                 line-height: 1.15;
             }
+
             .hero p {
-                font-size: 20px; /* Texto de apoio mais encorpado */
+                font-size: 20px;
+                /* Texto de apoio mais encorpado */
                 max-width: 90%;
                 line-height: 1.5;
             }
+
             .tag-hero {
                 font-size: 14px;
                 padding: 8px 20px;
@@ -177,7 +186,8 @@
             transition: all 0.3s ease-in-out;
             margin-top: -10px;
             /* Truque para subir o bloco em relação ao texto */
-            scroll-margin-top: 100px; /* INSERÇÃO CIRÚRGICA: Protege o formulário de ser cortado pelo header fixo ao rolar a página */
+            scroll-margin-top: 100px;
+            /* INSERÇÃO CIRÚRGICA: Protege o formulário de ser cortado pelo header fixo ao rolar a página */
         }
 
         .form-box h2 {
@@ -216,7 +226,7 @@
             border: 1px solid #ccc;
             border-radius: 4px;
             font-family: inherit;
-            font-size: 16px; 
+            font-size: 16px;
             transition: 0.3s;
             background: #fdfdfd;
         }
@@ -473,18 +483,19 @@
 
         .media-container {
             width: 100%;
-            height: 220px; 
-            background: #111; 
+            height: 220px;
+            background: #111;
             position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
-        .media-container video, .media-container img {
+        .media-container video,
+        .media-container img {
             width: 100%;
             height: 100%;
-            object-fit: contain; 
+            object-fit: contain;
         }
 
         .depoimento-body {
@@ -566,12 +577,12 @@
             font-size: 18px;
             cursor: pointer;
             z-index: 10;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
             transition: 0.3s, opacity 0.3s;
             display: flex;
             align-items: center;
             justify-content: center;
-            touch-action: manipulation; 
+            touch-action: manipulation;
         }
 
         .nav-btn:disabled {
@@ -585,12 +596,22 @@
             color: var(--primary);
         }
 
-        .btn-prev { left: 0px; }
-        .btn-next { right: 0px; }
+        .btn-prev {
+            left: 0px;
+        }
+
+        .btn-next {
+            right: 0px;
+        }
 
         @media (max-width: 768px) {
-            .btn-prev { left: 5px; }
-            .btn-next { right: 5px; }
+            .btn-prev {
+                left: 5px;
+            }
+
+            .btn-next {
+                right: 5px;
+            }
         }
 
         .faq {
@@ -610,7 +631,7 @@
             border-radius: 8px;
             border: 1px solid #eee;
             overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
         }
 
         .faq-btn {
@@ -653,7 +674,7 @@
             line-height: 1.6;
         }
 
-        .faq-btn.ativo + .faq-resposta {
+        .faq-btn.ativo+.faq-resposta {
             padding: 0 20px 20px 20px;
             max-height: 500px;
         }
@@ -802,37 +823,206 @@
         /* ==========================================
            ESTILOS DO FORMULÁRIO MULTI-STEP
            ========================================== */
-        .progress-bar { width: 100%; height: 6px; background: #eee; border-radius: 10px; overflow: hidden; margin-bottom: 25px; }
-        .progress-fill { height: 100%; background: var(--primary); width: 20%; transition: width 0.4s ease; }
-        .step-content { display: none; animation: fadeIn 0.4s ease forwards; }
-        .step-content.active { display: block; }
-        .step-title { font-size: 18px; margin-bottom: 20px; text-align: center; font-weight: 800; color: var(--dark); text-transform: uppercase; }
-        
-        .options-grid { display: grid; grid-template-columns: 1fr; gap: 10px; }
-        .installments-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-        
-        .option-btn { background: #fdfdfd; border: 1px solid #ccc; color: #333; padding: 14px; border-radius: 8px; text-align: left; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 12px; }
-        .installments-grid .option-btn { justify-content: center; text-align: center; }
-        .option-btn:hover { border-color: var(--primary); background: rgba(200, 16, 46, 0.05); }
-        .option-btn i { font-size: 20px; color: var(--primary); }
-        
-        .radio-group { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 15px; }
-        .radio-btn { background: #fdfdfd; border: 1px solid #ccc; color: #333; padding: 12px; border-radius: 6px; text-align: center; font-weight: bold; cursor: pointer; transition: all 0.2s; }
-        .radio-btn.selected { border-color: var(--primary); background: rgba(200, 16, 46, 0.1); color: var(--primary); }
-        
-        .form-actions { margin-top: 25px; display: flex; gap: 10px; }
-        .btn-full { width: 100%; flex: 1; padding: 14px; background: var(--dark); color: white; border: none; border-radius: 6px; font-weight: 800; text-transform: uppercase; cursor: pointer; transition: 0.3s; border-bottom: 4px solid #333; display: flex; align-items: center; justify-content: center; gap: 8px;}
-        .btn-full:hover { background: var(--primary); border-color: #a0001e; transform: translateY(-2px); }
-        
-        .btn-outline { background: transparent; border: 1px solid #999; color: #555; padding: 14px 20px; border-radius: 6px; font-weight: bold; cursor: pointer; transition: 0.3s; display: flex; align-items: center; gap: 8px;}
-        .btn-outline:hover { background: #eee; color: #333; }
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background: #eee;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 25px;
+        }
 
-        .success-ui { text-align: center; display: flex; flex-direction: column; align-items: center; padding: 20px 0; }
-        .success-box-icon { display: inline-flex; align-items: center; justify-content: center; width: 60px; height: 60px; background-color: #27ae60; border-radius: 50%; margin-bottom: 15px; animation: scaleIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
-        .success-box-icon i { font-size: 30px; color: #fff; }
-        .success-title { font-size: 22px; font-weight: 800; color: #333; text-transform: uppercase; margin-bottom: 10px; }
-        .success-message-box p { color: #ff0000; font-weight: 900; font-size: 14px; text-transform: uppercase; margin-bottom: 20px; }
-        .link-nova-simulacao { color: var(--primary); font-weight: bold; text-decoration: underline; font-size: 14px; cursor: pointer; }
+        .progress-fill {
+            height: 100%;
+            background: var(--primary);
+            width: 20%;
+            transition: width 0.4s ease;
+        }
+
+        .step-content {
+            display: none;
+            animation: fadeIn 0.4s ease forwards;
+        }
+
+        .step-content.active {
+            display: block;
+        }
+
+        .step-title {
+            font-size: 18px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 800;
+            color: var(--dark);
+            text-transform: uppercase;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        .installments-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .option-btn {
+            background: #fdfdfd;
+            border: 1px solid #ccc;
+            color: #333;
+            padding: 14px;
+            border-radius: 8px;
+            text-align: left;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .installments-grid .option-btn {
+            justify-content: center;
+            text-align: center;
+        }
+
+        .option-btn:hover {
+            border-color: var(--primary);
+            background: rgba(200, 16, 46, 0.05);
+        }
+
+        .option-btn i {
+            font-size: 20px;
+            color: var(--primary);
+        }
+
+        .radio-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .radio-btn {
+            background: #fdfdfd;
+            border: 1px solid #ccc;
+            color: #333;
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .radio-btn.selected {
+            border-color: var(--primary);
+            background: rgba(200, 16, 46, 0.1);
+            color: var(--primary);
+        }
+
+        .form-actions {
+            margin-top: 25px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-full {
+            width: 100%;
+            flex: 1;
+            padding: 14px;
+            background: var(--dark);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: 800;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: 0.3s;
+            border-bottom: 4px solid #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-full:hover {
+            background: var(--primary);
+            border-color: #a0001e;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid #999;
+            color: #555;
+            padding: 14px 20px;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-outline:hover {
+            background: #eee;
+            color: #333;
+        }
+
+        .success-ui {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .success-box-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background-color: #27ae60;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            animation: scaleIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+
+        .success-box-icon i {
+            font-size: 30px;
+            color: #fff;
+        }
+
+        .success-title {
+            font-size: 22px;
+            font-weight: 800;
+            color: #333;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .success-message-box p {
+            color: #ff0000;
+            font-weight: 900;
+            font-size: 14px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .link-nova-simulacao {
+            color: var(--primary);
+            font-weight: bold;
+            text-decoration: underline;
+            font-size: 14px;
+            cursor: pointer;
+        }
 
         /* Ajuste específico para Celular */
         @media (max-width: 768px) {
@@ -886,8 +1076,8 @@
         <div class="hero-content">
             <span class="tag-hero">Atendimento em Todo Brasil e Exterior</span>
             <h1 style="font-size: 32px; line-height: 1.3;">
-                Realize o sonho da Casa Própria ou Veículo, Sem Juros.<br>
-                <span style="color: var(--primary); font-weight: 900;">através do consórcio</span>
+                Conquiste seu Imóvel com estratégia<br>
+                <span style="color: var(--primary); font-weight: 900;">e não com juros!</span>
             </h1>
             <p>Descubra como conquistar seu patrimônio com as menores taxas do mercado.</p>
 
@@ -897,21 +1087,31 @@
             <div id="form-container-div" class="fade-in">
                 <h2>Simulação Gratuita</h2>
                 <p class="form-sub">Preencha para receber uma análise personalizada.</p>
-                
+
                 <div class="progress-bar" id="progressBarContainer">
                     <div class="progress-fill" id="progressFill"></div>
                 </div>
 
                 <form id="simulacaoForm">
-                    
+
                     <div class="step-content active" id="step1">
                         <div class="step-title">Qual o seu interesse?</div>
                         <div class="options-grid">
-                            <div class="option-btn" onclick="selectOption('Imóvel')"><i class="fas fa-home"></i> Imóvel <div class="fake-radio"></div></div>
-                            <div class="option-btn" onclick="selectOption('Veículo')"><i class="fas fa-car"></i> Veículo <div class="fake-radio"></div></div>
-                            <div class="option-btn" onclick="selectOption('Caminhão ou máquinas')"><i class="fas fa-truck"></i> Caminhão ou máquinas <div class="fake-radio"></div></div>
-                            <div class="option-btn" onclick="selectOption('Serviços')"><i class="fas fa-plane"></i> Serviços (cirurgia, viagem) <div class="fake-radio"></div></div>
-                            <div class="option-btn" onclick="selectOption('Investimentos')"><i class="fas fa-chart-line"></i> Investimentos (outros) <div class="fake-radio"></div></div>
+                            <div class="option-btn" onclick="selectOption('Imóvel')"><i class="fas fa-home"></i> Imóvel
+                                <div class="fake-radio"></div>
+                            </div>
+                            <div class="option-btn" onclick="selectOption('Veículo')"><i class="fas fa-car"></i> Veículo
+                                <div class="fake-radio"></div>
+                            </div>
+                            <div class="option-btn" onclick="selectOption('Caminhão ou máquinas')"><i
+                                    class="fas fa-truck"></i> Caminhão ou máquinas <div class="fake-radio"></div>
+                            </div>
+                            <div class="option-btn" onclick="selectOption('Serviços')"><i class="fas fa-plane"></i>
+                                Serviços (cirurgia, viagem) <div class="fake-radio"></div>
+                            </div>
+                            <div class="option-btn" onclick="selectOption('Investimentos')"><i
+                                    class="fas fa-chart-line"></i> Investimentos (outros) <div class="fake-radio"></div>
+                            </div>
                         </div>
                         <input type="hidden" id="interesse" name="interesse">
                     </div>
@@ -920,23 +1120,28 @@
                         <div class="step-title">Valor Planejado</div>
                         <div class="input-group">
                             <label>Qual o valor do crédito desejado?</label>
-                            <input type="text" class="money-mask" id="valorCredito" placeholder="Ex: R$ 150.000,00" required>
+                            <input type="text" class="money-mask" id="valorCredito" placeholder="Ex: R$ 150.000,00"
+                                required>
                         </div>
                         <div class="form-actions">
-                            <button type="button" class="btn-outline" onclick="prevStep(1)"><i class="fas fa-arrow-left"></i> Voltar</button>
-                            <button type="button" class="btn-full" onclick="calculateInstallments()">Avançar <i class="fas fa-arrow-right"></i></button>
+                            <button type="button" class="btn-outline" onclick="prevStep(1)"><i
+                                    class="fas fa-arrow-left"></i> Voltar</button>
+                            <button type="button" class="btn-full" onclick="calculateInstallments()">Avançar <i
+                                    class="fas fa-arrow-right"></i></button>
                         </div>
                     </div>
 
                     <div class="step-content" id="step3">
                         <div class="step-title">Opções de Parcelas</div>
-                        <p class="form-sub" style="margin-bottom: 15px;">Selecione o valor que melhor se encaixa no seu orçamento mensal:</p>
-                        
+                        <p class="form-sub" style="margin-bottom: 15px;">Selecione o valor que melhor se encaixa no seu
+                            orçamento mensal:</p>
+
                         <div class="installments-grid" id="installmentOptionsGrid"></div>
                         <input type="hidden" id="valorParcelaSelecionado" name="valorParcelaSelecionado">
 
                         <div class="form-actions">
-                            <button type="button" class="btn-outline" onclick="prevStep(2)"><i class="fas fa-arrow-left"></i> Voltar</button>
+                            <button type="button" class="btn-outline" onclick="prevStep(2)"><i
+                                    class="fas fa-arrow-left"></i> Voltar</button>
                         </div>
                     </div>
 
@@ -950,15 +1155,19 @@
                             </div>
                             <input type="hidden" id="reservaLance" name="reservaLance" required>
                         </div>
-                        
-                        <div class="input-group" id="grupoValorLance" style="display: none; animation: fadeIn 0.4s ease forwards;">
+
+                        <div class="input-group" id="grupoValorLance"
+                            style="display: none; animation: fadeIn 0.4s ease forwards;">
                             <label>Qual valor aproximado do lance?</label>
-                            <input type="text" class="money-mask" id="valorLanceAproximado" placeholder="Ex: R$ 10.000,00">
+                            <input type="text" class="money-mask" id="valorLanceAproximado"
+                                placeholder="Ex: R$ 10.000,00">
                         </div>
 
                         <div class="form-actions">
-                            <button type="button" class="btn-outline" onclick="prevStep(3)"><i class="fas fa-arrow-left"></i> Voltar</button>
-                            <button type="button" class="btn-full" onclick="nextStep(5)">Avançar <i class="fas fa-arrow-right"></i></button>
+                            <button type="button" class="btn-outline" onclick="prevStep(3)"><i
+                                    class="fas fa-arrow-left"></i> Voltar</button>
+                            <button type="button" class="btn-full" onclick="nextStep(5)">Avançar <i
+                                    class="fas fa-arrow-right"></i></button>
                         </div>
                     </div>
 
@@ -968,7 +1177,7 @@
                             <label>Nome completo</label>
                             <input type="text" id="nome" placeholder="Seu nome" required>
                         </div>
-                        
+
                         <div class="input-group">
                             <label>Qual a renda mensal aproximada?</label>
                             <input type="text" class="money-mask" id="renda" placeholder="Ex: R$ 8.000,00" required>
@@ -984,11 +1193,14 @@
                         </div>
                         <div class="input-group">
                             <label>WhatsApp (DDD ou +País)</label>
-                            <input type="tel" class="phone-mask" id="whatsapp" placeholder="+55 (00) 00000-0000" required>
+                            <input type="tel" class="phone-mask" id="whatsapp" placeholder="+55 (00) 00000-0000"
+                                required>
                         </div>
                         <div class="form-actions">
-                            <button type="button" class="btn-outline" onclick="prevStep(4)"><i class="fas fa-arrow-left"></i> Voltar</button>
-                            <button type="submit" class="btn-full btn-submit">Solicitar Análise <i class="fas fa-check-circle"></i></button>
+                            <button type="button" class="btn-outline" onclick="prevStep(4)"><i
+                                    class="fas fa-arrow-left"></i> Voltar</button>
+                            <button type="submit" class="btn-full btn-submit">Solicitar Análise <i
+                                    class="fas fa-check-circle"></i></button>
                         </div>
                     </div>
 
@@ -1004,8 +1216,10 @@
                                 <p>Clique no botão abaixo para receber sua simulação agora mesmo!</p>
                             </div>
 
-                            <a id="btn-whats-direto" href="#" target="_blank" class="btn-whatsapp-pos" aria-label="Falar com Jefferson Reis no WhatsApp">
-                                <i class="fab fa-whatsapp" style="font-size: 22px;" aria-hidden="true"></i> Falar com Jefferson Reis
+                            <a id="btn-whats-direto" href="#" target="_blank" class="btn-whatsapp-pos"
+                                aria-label="Falar com Jefferson Reis no WhatsApp">
+                                <i class="fab fa-whatsapp" style="font-size: 22px;" aria-hidden="true"></i> Falar com
+                                Jefferson Reis
                             </a>
 
                             <div style="margin-top: 15px;">
@@ -1066,14 +1280,16 @@
     </section>
 
     <section class="depoimentos">
-        <h2 class="section-title" style="color: var(--white); font-size: 30px;">Quem planeja, <span style="color: var(--primary);">realiza.</span></h2>
+        <h2 class="section-title" style="color: var(--white); font-size: 30px;">Quem planeja, <span
+                style="color: var(--primary);">realiza.</span></h2>
         <p>Veja os resultados reais de quem confiou em nossa consultoria.</p>
-        
+
         <div class="carrossel-container">
-            <button class="nav-btn btn-prev" id="btnPrev" onclick="scrollDepoimentos(-1)" aria-label="Ver depoimento anterior"><i class="fas fa-chevron-left"></i></button>
-            
+            <button class="nav-btn btn-prev" id="btnPrev" onclick="scrollDepoimentos(-1)"
+                aria-label="Ver depoimento anterior"><i class="fas fa-chevron-left"></i></button>
+
             <div class="depoimentos-track" id="track-depoimentos">
-                
+
                 <div class="depoimento-card">
                     <div class="media-container">
                         <video controls>
@@ -1086,30 +1302,33 @@
                         <span>Resultados Reais</span>
                     </div>
                 </div>
-                
+
                 <div class="depoimento-card">
                     <div class="media-container">
-                        <img src="img/dep1.webp" alt="Casa conquistada pelo cliente" onerror="this.src='https://via.placeholder.com/400x400/222/fff?text=IMAGEM'">
+                        <img src="img/dep1.webp" alt="Casa conquistada pelo cliente"
+                            onerror="this.src='https://via.placeholder.com/400x400/222/fff?text=IMAGEM'">
                     </div>
                     <div class="depoimento-footer">
                         <i class="fas fa-check-circle"></i>
                         <span>Cliente Contemplado</span>
                     </div>
                 </div>
-                
+
                 <div class="depoimento-card">
                     <div class="media-container">
-                        <img src="img/dep2.webp" alt="Casa conquistada pelo cliente" onerror="this.src='https://via.placeholder.com/400x400/222/fff?text=IMAGEM'">
+                        <img src="img/dep2.webp" alt="Casa conquistada pelo cliente"
+                            onerror="this.src='https://via.placeholder.com/400x400/222/fff?text=IMAGEM'">
                     </div>
                     <div class="depoimento-footer">
                         <i class="fas fa-check-circle"></i>
                         <span>Mais um Sonho Realizado</span>
                     </div>
                 </div>
-                
+
                 <div class="depoimento-card">
                     <div class="media-container">
-                        <img src="img/dep3.webp" alt="Moto conquistada" onerror="this.src='https://via.placeholder.com/400x400/222/fff?text=IMAGEM'">
+                        <img src="img/dep3.webp" alt="Moto conquistada"
+                            onerror="this.src='https://via.placeholder.com/400x400/222/fff?text=IMAGEM'">
                     </div>
                     <div class="depoimento-footer">
                         <i class="fas fa-check-circle"></i>
@@ -1119,7 +1338,8 @@
 
                 <div class="depoimento-card">
                     <div class="media-container">
-                        <img src="img/dep4.webp" alt="Casa conquistada pelo cliente" onerror="this.src='https://via.placeholder.com/400x400/222/fff?text=IMAGEM'">
+                        <img src="img/dep4.webp" alt="Casa conquistada pelo cliente"
+                            onerror="this.src='https://via.placeholder.com/400x400/222/fff?text=IMAGEM'">
                     </div>
                     <div class="depoimento-footer">
                         <i class="fas fa-check-circle"></i>
@@ -1129,7 +1349,8 @@
 
                 <div class="depoimento-card">
                     <div class="media-container">
-                        <img src="img/dep5.webp" alt="Casa conquistada pelo cliente" onerror="this.src='https://via.placeholder.com/400x400/222/fff?text=IMAGEM'">
+                        <img src="img/dep5.webp" alt="Casa conquistada pelo cliente"
+                            onerror="this.src='https://via.placeholder.com/400x400/222/fff?text=IMAGEM'">
                     </div>
                     <div class="depoimento-footer">
                         <i class="fas fa-check-circle"></i>
@@ -1139,7 +1360,8 @@
 
                 <div class="depoimento-card">
                     <div class="media-container">
-                        <img src="img/dep6.webp" alt="Casa conquistada pelo cliente" onerror="this.src='https://via.placeholder.com/400x400/222/fff?text=IMAGEM'">
+                        <img src="img/dep6.webp" alt="Casa conquistada pelo cliente"
+                            onerror="this.src='https://via.placeholder.com/400x400/222/fff?text=IMAGEM'">
                     </div>
                     <div class="depoimento-footer">
                         <i class="fas fa-check-circle"></i>
@@ -1148,47 +1370,65 @@
                 </div>
 
             </div>
-            
-            <button class="nav-btn btn-next" id="btnNext" onclick="scrollDepoimentos(1)" aria-label="Ver próximo depoimento"><i class="fas fa-chevron-right"></i></button>
+
+            <button class="nav-btn btn-next" id="btnNext" onclick="scrollDepoimentos(1)"
+                aria-label="Ver próximo depoimento"><i class="fas fa-chevron-right"></i></button>
         </div>
     </section>
 
     <section class="faq">
-        <h2 class="section-title" style="color: var(--dark); font-size: 30px; text-align: center;">Perguntas <span style="color: var(--primary);">Frequentes</span></h2>
-        
+        <h2 class="section-title" style="color: var(--dark); font-size: 30px; text-align: center;">Perguntas <span
+                style="color: var(--primary);">Frequentes</span></h2>
+
         <div class="faq-container">
             <div class="faq-item">
-                <button class="faq-btn">O consórcio cobra juros igual ao financiamento? <i class="fas fa-chevron-down"></i></button>
+                <button class="faq-btn">O consórcio cobra juros igual ao financiamento? <i
+                        class="fas fa-chevron-down"></i></button>
                 <div class="faq-resposta">
-                    <p><strong>Não!</strong> Essa é a principal vantagem do consórcio. Diferente do financiamento bancário, que cobra juros compostos altíssimos, o consórcio cobra apenas uma pequena Taxa de Administração, que é fixa e diluída ao longo de todas as parcelas. No final, a economia chega a ser gigantesca.</p>
+                    <p><strong>Não!</strong> Essa é a principal vantagem do consórcio. Diferente do financiamento
+                        bancário, que cobra juros compostos altíssimos, o consórcio cobra apenas uma pequena Taxa de
+                        Administração, que é fixa e diluída ao longo de todas as parcelas. No final, a economia chega a
+                        ser gigantesca.</p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <button class="faq-btn">Consórcio demora muito para contemplar? <i class="fas fa-chevron-down"></i></button>
+                <button class="faq-btn">Consórcio demora muito para contemplar? <i
+                        class="fas fa-chevron-down"></i></button>
                 <div class="faq-resposta">
-                    <p>Não necessariamente. Dependendo do seu capital para lance, ou utilizando o "Lance Embutido", podemos traçar estratégias em grupos já em andamento para acelerar sua contemplação logo nos primeiros meses. A consultoria serve exatamente para não depender apenas da sorte dos sorteios.</p>
+                    <p>Não necessariamente. Dependendo do seu capital para lance, ou utilizando o "Lance Embutido",
+                        podemos traçar estratégias em grupos já em andamento para acelerar sua contemplação logo nos
+                        primeiros meses. A consultoria serve exatamente para não depender apenas da sorte dos sorteios.
+                    </p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <button class="faq-btn">Não tenho dinheiro para o lance. Posso ser contemplado rápido? <i class="fas fa-chevron-down"></i></button>
+                <button class="faq-btn">Não tenho dinheiro para o lance. Posso ser contemplado rápido? <i
+                        class="fas fa-chevron-down"></i></button>
                 <div class="faq-resposta">
-                    <p>Sim! Uma excelente estratégia é o <strong>Lance Embutido</strong>. Nele, você utiliza um percentual do próprio crédito que vai receber para ofertar o lance. Ou seja, você não precisa tirar dinheiro do próprio bolso no momento da contemplação.</p>
+                    <p>Sim! Uma excelente estratégia é o <strong>Lance Embutido</strong>. Nele, você utiliza um
+                        percentual do próprio crédito que vai receber para ofertar o lance. Ou seja, você não precisa
+                        tirar dinheiro do próprio bolso no momento da contemplação.</p>
                 </div>
             </div>
-            
+
             <div class="faq-item">
                 <button class="faq-btn">Posso usar meu saldo do FGTS? <i class="fas fa-chevron-down"></i></button>
                 <div class="faq-resposta">
-                    <p>Sim! Para consórcios imobiliários, você pode utilizar 100% do seu saldo do FGTS para ofertar lances (aumentando suas chances de pegar a chave rápido), complementar a carta de crédito na hora da compra, ou até mesmo amortizar as parcelas futuras.</p>
+                    <p>Sim! Para consórcios imobiliários, você pode utilizar 100% do seu saldo do FGTS para ofertar
+                        lances (aumentando suas chances de pegar a chave rápido), complementar a carta de crédito na
+                        hora da compra, ou até mesmo amortizar as parcelas futuras.</p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <button class="faq-btn">E se eu tiver um imprevisto e atrasar a parcela? <i class="fas fa-chevron-down"></i></button>
+                <button class="faq-btn">E se eu tiver um imprevisto e atrasar a parcela? <i
+                        class="fas fa-chevron-down"></i></button>
                 <div class="faq-resposta">
-                    <p>Se você ainda não foi contemplado, o atraso apenas impede a sua participação nos sorteios daquele mês específico. Não perde o que já pagou. Caso os imprevistos continuem, há opções de diminuir a carta de crédito para reduzir a parcela. Planejamento e flexibilidade andam juntos.</p>
+                    <p>Se você ainda não foi contemplado, o atraso apenas impede a sua participação nos sorteios daquele
+                        mês específico. Não perde o que já pagou. Caso os imprevistos continuem, há opções de diminuir a
+                        carta de crédito para reduzir a parcela. Planejamento e flexibilidade andam juntos.</p>
                 </div>
             </div>
         </div>
@@ -1214,10 +1454,12 @@
     <footer>
         <div class="footer-info">
             <div class="social-links">
-                <a href="https://www.instagram.com/reis.jeffersonreis" target="_blank" title="Instagram" aria-label="Visite nosso Instagram">
+                <a href="https://www.instagram.com/reis.jeffersonreis" target="_blank" title="Instagram"
+                    aria-label="Visite nosso Instagram">
                     <i class="fab fa-instagram" aria-hidden="true"></i>
                 </a>
-                <a href="https://www.facebook.com/share/1FahqzhuGR/?mibextid=wwXIfr" target="_blank" title="Facebook" aria-label="Visite nosso Facebook">
+                <a href="https://www.facebook.com/share/1FahqzhuGR/?mibextid=wwXIfr" target="_blank" title="Facebook"
+                    aria-label="Visite nosso Facebook">
                     <i class="fab fa-facebook-f" aria-hidden="true"></i>
                 </a>
                 <a href="https://youtube.com/@reisconsultoriaefinanceira1156?si=GOjjIZc281JGM7qY" target="_blank"
@@ -1245,14 +1487,14 @@
            LÓGICA DO FORMULÁRIO MULTI-STEP
            ========================================== */
         let currentStep = 1;
-        const totalSteps = 5; 
+        const totalSteps = 5;
 
         function updateProgress() {
             const fill = document.getElementById('progressFill');
             const percentage = ((currentStep - 1) / totalSteps) * 100;
             fill.style.width = percentage + '%';
 
-            if (currentStep === 6) { 
+            if (currentStep === 6) {
                 document.getElementById('progressBarContainer').style.display = 'none';
                 document.querySelector('.form-box h2').style.display = 'none';
                 document.querySelector('.form-sub').style.display = 'none';
@@ -1306,15 +1548,15 @@
             let percentages = [];
 
             if (interest === 'Veículo') {
-                percentages = [0.0070, 0.0085, 0.0100, 0.0115]; 
+                percentages = [0.0070, 0.0085, 0.0100, 0.0115];
             } else if (interest === 'Imóvel') {
-                percentages = [0.0030, 0.0040, 0.0050, 0.0070]; 
+                percentages = [0.0030, 0.0040, 0.0050, 0.0070];
             } else {
-                percentages = [0.0050, 0.00625, 0.0075, 0.00925]; 
+                percentages = [0.0050, 0.00625, 0.0075, 0.00925];
             }
 
             const optionsContainer = document.getElementById('installmentOptionsGrid');
-            optionsContainer.innerHTML = ''; 
+            optionsContainer.innerHTML = '';
 
             percentages.forEach(p => {
                 let instValue = creditAmount * p;
@@ -1339,16 +1581,16 @@
             document.getElementById('reservaLance').value = value;
             document.getElementById('reservaSim').classList.remove('selected');
             document.getElementById('reservaNao').classList.remove('selected');
-            
+
             const grupoValorLance = document.getElementById('grupoValorLance');
 
             if (value === 'Sim') {
                 document.getElementById('reservaSim').classList.add('selected');
-                grupoValorLance.style.display = 'block'; 
+                grupoValorLance.style.display = 'block';
             } else {
                 document.getElementById('reservaNao').classList.add('selected');
-                grupoValorLance.style.display = 'none'; 
-                document.getElementById('valorLanceAproximado').value = ''; 
+                grupoValorLance.style.display = 'none';
+                document.getElementById('valorLanceAproximado').value = '';
             }
         }
 
@@ -1382,7 +1624,7 @@
                 dados_adicionais: { origem: "Site Oficial Multi-Step" }
             };
 
-            fetch('https://consorcio-hub-api.onrender.com/simular/', { 
+            fetch('https://consorcio-hub-api.onrender.com/simular/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -1390,35 +1632,35 @@
                 },
                 body: JSON.stringify(payload)
             })
-            .then(async response => {
-                fbq('track', 'Lead', {
-                    content_name: 'Simulação ' + produtoSelecionado,
-                    value: isNaN(valorLimpo) ? 0 : valorLimpo,
-                    currency: 'BRL'
+                .then(async response => {
+                    fbq('track', 'Lead', {
+                        content_name: 'Simulação ' + produtoSelecionado,
+                        value: isNaN(valorLimpo) ? 0 : valorLimpo,
+                        currency: 'BRL'
+                    });
+
+                    const numPai = "5531995246410";
+                    const msgWhatsApp = `Vim através do site! (${produtoSelecionado.toLowerCase()})`;
+                    const msg = encodeURIComponent(msgWhatsApp);
+                    document.getElementById('btn-whats-direto').href = `https://wa.me/${numPai}?text=${msg}`;
+
+                    if (response.ok || response.status === 200) {
+                        showStep(6);
+                    } else {
+                        showStep(6);
+                    }
+                })
+                .catch(error => {
+                    console.error('Erro ao conectar com o CRM:', error);
+                    const numPai = "5531995246410";
+                    const msgWhatsApp = `Vim através do site! (${produtoSelecionado.toLowerCase()})`;
+                    document.getElementById('btn-whats-direto').href = `https://wa.me/${numPai}?text=${encodeURIComponent(msgWhatsApp)}`;
+                    showStep(6);
+                })
+                .finally(() => {
+                    btnSubmit.innerHTML = originalText;
+                    btnSubmit.disabled = false;
                 });
-
-                const numPai = "5531995246410";
-                const msgWhatsApp = `Vim através do site! (${produtoSelecionado.toLowerCase()})`;
-                const msg = encodeURIComponent(msgWhatsApp);
-                document.getElementById('btn-whats-direto').href = `https://wa.me/${numPai}?text=${msg}`;
-
-                if (response.ok || response.status === 200) {
-                    showStep(6); 
-                } else {
-                    showStep(6); 
-                }
-            })
-            .catch(error => {
-                console.error('Erro ao conectar com o CRM:', error);
-                const numPai = "5531995246410";
-                const msgWhatsApp = `Vim através do site! (${produtoSelecionado.toLowerCase()})`;
-                document.getElementById('btn-whats-direto').href = `https://wa.me/${numPai}?text=${encodeURIComponent(msgWhatsApp)}`;
-                showStep(6);
-            })
-            .finally(() => {
-                btnSubmit.innerHTML = originalText;
-                btnSubmit.disabled = false;
-            });
         });
 
         function resetForm() {
@@ -1428,7 +1670,7 @@
             document.getElementById('interesse').value = '';
             document.getElementById('valorParcelaSelecionado').value = '';
             document.getElementById('reservaLance').value = '';
-            
+
             document.getElementById('grupoValorLance').style.display = 'none';
             document.getElementById('valorLanceAproximado').value = '';
 
@@ -1463,7 +1705,7 @@
             }
         });
 
-        document.getElementById('btn-whats-direto').addEventListener('click', function() {
+        document.getElementById('btn-whats-direto').addEventListener('click', function () {
             const produtoSelecionado = document.getElementById('interesse').value || "Consórcio";
             fbq('trackCustom', 'CliqueWhatsApp', {
                 content_name: 'WhatsApp ' + produtoSelecionado
@@ -1482,7 +1724,7 @@
             } else {
                 btnPrev.disabled = false;
             }
-            
+
             if (track.scrollLeft + track.clientWidth >= track.scrollWidth - 5) {
                 btnNext.disabled = true;
             } else {
@@ -1491,20 +1733,20 @@
         }
 
         function scrollDepoimentos(direction) {
-            if (isScrolling) return; 
-            
-            const cardWidth = track.querySelector('.depoimento-card').offsetWidth + 20; 
+            if (isScrolling) return;
+
+            const cardWidth = track.querySelector('.depoimento-card').offsetWidth + 20;
             const currentScroll = track.scrollLeft;
             const maxScroll = track.scrollWidth - track.clientWidth;
-            
+
             let targetScroll = currentScroll + (cardWidth * direction);
-            
+
             if (targetScroll <= 0) targetScroll = 0;
             if (targetScroll >= maxScroll) targetScroll = maxScroll;
-            
+
             isScrolling = true;
             track.scrollTo({ left: targetScroll, behavior: 'smooth' });
-            
+
             setTimeout(() => {
                 isScrolling = false;
                 updateCarrosselButtons();
@@ -1517,12 +1759,12 @@
         // Lógica do Accordion (FAQ)
         const faqBtns = document.querySelectorAll('.faq-btn');
         faqBtns.forEach(btn => {
-            btn.addEventListener('click', function() {
+            btn.addEventListener('click', function () {
                 this.classList.toggle('ativo');
             });
         });
     </script>
-    
+
     <script>
         !function (f, b, e, v, n, t, s) {
             if (f.fbq) return; n = f.fbq = function () {
@@ -1540,7 +1782,7 @@
     </script>
     <noscript><img height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=1302260101797170&ev=PageView&noscript=1" /></noscript>
-            
+
 </body>
 
 </html>
