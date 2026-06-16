@@ -87,15 +87,11 @@
             background-size: cover;
             background-position: center;
             padding: 80px 5% 60px 5%;
-            /* INSERÇÃO CIRÚRGICA: Reduzido de 110px para 80px para subir a seção inteira */
-            /* Padding reduzido para subir tudo */
             display: flex;
             flex-wrap: wrap;
             align-items: flex-start;
-            /* Alinhamento no topo */
             justify-content: center;
             gap: 40px;
-            /* Reduzi o gap entre texto e form */
             min-height: 90vh;
         }
 
@@ -134,33 +130,27 @@
             font-size: 18px;
             opacity: 0.9;
             margin-bottom: 15px;
-            /* Reduzi a margem para colar no form */
             border-left: 4px solid var(--primary);
             padding-left: 15px;
         }
 
-        /* INSERÇÃO CIRÚRGICA: Regras exclusivas para o PC (Equilibrando o design sem a grade) */
         @media (min-width: 769px) {
             .hero {
                 align-items: flex-start;
-                /* INSERÇÃO CIRÚRGICA: Alterado de center para flex-start para remover o buraco no topo */
             }
 
             .hero-content {
                 margin-top: 30px;
-                /* INSERÇÃO CIRÚRGICA: Alinha perfeitamente o texto com a caixa do formulário */
             }
 
             .hero h1 {
                 font-size: 52px;
-                /* Título maior e imponente */
                 margin-bottom: 20px;
                 line-height: 1.15;
             }
 
             .hero p {
                 font-size: 20px;
-                /* Texto de apoio mais encorpado */
                 max-width: 90%;
                 line-height: 1.5;
             }
@@ -176,7 +166,6 @@
         .form-box {
             background: var(--white);
             padding: 30px;
-            /* Padding interno um pouco menor */
             border-radius: 8px;
             width: 100%;
             max-width: 420px;
@@ -185,9 +174,7 @@
             position: relative;
             transition: all 0.3s ease-in-out;
             margin-top: -10px;
-            /* Truque para subir o bloco em relação ao texto */
             scroll-margin-top: 100px;
-            /* INSERÇÃO CIRÚRGICA: Protege o formulário de ser cortado pelo header fixo ao rolar a página */
         }
 
         .form-box h2 {
@@ -278,27 +265,6 @@
             background: var(--primary);
             border-color: #a0001e;
             transform: translateY(-2px);
-        }
-
-        /* Botão Voltar */
-        .btn-voltar {
-            margin-top: 20px;
-            border: none;
-            background: none;
-            text-decoration: underline;
-            cursor: pointer;
-            color: var(--primary);
-            font-weight: bold;
-            font-size: 14px;
-            transition: 0.3s;
-            padding: 10px 20px;
-            border-radius: 4px;
-        }
-
-        .btn-voltar:hover {
-            background-color: #f0f0f0;
-            color: var(--dark);
-            transform: scale(1.05);
         }
 
         .fade-in {
@@ -755,27 +721,20 @@
             width: 45px;
             height: 45px;
             background: rgba(255, 255, 255, 0.05);
-            /* Fundo sutil */
             border: 1px solid rgba(255, 255, 255, 0.1);
-            /* Contorno discreto */
             color: white;
             border-radius: 50%;
-            /* Formato circular */
             font-size: 20px;
             text-decoration: none;
             transition: all 0.3s ease;
         }
 
-        /* Efeito ao passar o mouse (Hover) */
         .social-links a:hover {
             background: var(--primary);
-            /* Fica vermelho Reis */
             border-color: var(--primary);
             color: white;
             transform: translateY(-5px);
-            /* Sobe um pouquinho */
             box-shadow: 0 5px 15px rgba(200, 16, 46, 0.4);
-            /* Brilho vermelho */
         }
 
         /* BOTÃO WHATSAPP COM EFEITO DE PULSO */
@@ -863,12 +822,6 @@
             gap: 10px;
         }
 
-        .installments-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-        }
-
         .option-btn {
             background: #fdfdfd;
             border: 1px solid #ccc;
@@ -885,11 +838,6 @@
             gap: 12px;
         }
 
-        .installments-grid .option-btn {
-            justify-content: center;
-            text-align: center;
-        }
-
         .option-btn:hover {
             border-color: var(--primary);
             background: rgba(200, 16, 46, 0.05);
@@ -897,31 +845,6 @@
 
         .option-btn i {
             font-size: 20px;
-            color: var(--primary);
-        }
-
-        .radio-group {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            margin-bottom: 15px;
-        }
-
-        .radio-btn {
-            background: #fdfdfd;
-            border: 1px solid #ccc;
-            color: #333;
-            padding: 12px;
-            border-radius: 6px;
-            text-align: center;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-
-        .radio-btn.selected {
-            border-color: var(--primary);
-            background: rgba(200, 16, 46, 0.1);
             color: var(--primary);
         }
 
@@ -1057,10 +980,6 @@
             .form-box {
                 margin-top: 20px;
             }
-
-            .installments-grid {
-                grid-template-columns: 1fr;
-            }
         }
     </style>
 </head>
@@ -1116,61 +1035,6 @@
                         <input type="hidden" id="interesse" name="interesse">
                     </div>
 
-                    <div class="step-content" id="step2">
-                        <div class="step-title">Valor Planejado</div>
-                        <div class="input-group">
-                            <label>Qual o valor do crédito desejado?</label>
-                            <input type="text" class="money-mask" id="valorCredito" placeholder="Ex: R$ 150.000,00"
-                                required>
-                        </div>
-                        <div class="form-actions">
-                            <button type="button" class="btn-outline" onclick="prevStep(1)"><i
-                                    class="fas fa-arrow-left"></i> Voltar</button>
-                            <button type="button" class="btn-full" onclick="calculateInstallments()">Avançar <i
-                                    class="fas fa-arrow-right"></i></button>
-                        </div>
-                    </div>
-
-                    <div class="step-content" id="step3">
-                        <div class="step-title">Opções de Parcelas</div>
-                        <p class="form-sub" style="margin-bottom: 15px;">Selecione o valor que melhor se encaixa no seu
-                            orçamento mensal:</p>
-
-                        <div class="installments-grid" id="installmentOptionsGrid"></div>
-                        <input type="hidden" id="valorParcelaSelecionado" name="valorParcelaSelecionado">
-
-                        <div class="form-actions">
-                            <button type="button" class="btn-outline" onclick="prevStep(2)"><i
-                                    class="fas fa-arrow-left"></i> Voltar</button>
-                        </div>
-                    </div>
-
-                    <div class="step-content" id="step4">
-                        <div class="step-title">Perfil Financeiro</div>
-                        <div class="input-group">
-                            <label>Possui alguma reserva para usar como lance?</label>
-                            <div class="radio-group">
-                                <div class="radio-btn" id="reservaSim" onclick="selectRadio('reserva', 'Sim')">Sim</div>
-                                <div class="radio-btn" id="reservaNao" onclick="selectRadio('reserva', 'Não')">Não</div>
-                            </div>
-                            <input type="hidden" id="reservaLance" name="reservaLance" required>
-                        </div>
-
-                        <div class="input-group" id="grupoValorLance"
-                            style="display: none; animation: fadeIn 0.4s ease forwards;">
-                            <label>Qual valor aproximado do lance?</label>
-                            <input type="text" class="money-mask" id="valorLanceAproximado"
-                                placeholder="Ex: R$ 10.000,00">
-                        </div>
-
-                        <div class="form-actions">
-                            <button type="button" class="btn-outline" onclick="prevStep(3)"><i
-                                    class="fas fa-arrow-left"></i> Voltar</button>
-                            <button type="button" class="btn-full" onclick="nextStep(5)">Avançar <i
-                                    class="fas fa-arrow-right"></i></button>
-                        </div>
-                    </div>
-
                     <div class="step-content" id="step5">
                         <div class="step-title">Qualificação e Contato</div>
                         <div class="input-group">
@@ -1197,7 +1061,7 @@
                                 required>
                         </div>
                         <div class="form-actions">
-                            <button type="button" class="btn-outline" onclick="prevStep(4)"><i
+                            <button type="button" class="btn-outline" onclick="prevStep(1)"><i
                                     class="fas fa-arrow-left"></i> Voltar</button>
                             <button type="submit" class="btn-full btn-submit">Solicitar Análise <i
                                     class="fas fa-check-circle"></i></button>
@@ -1487,7 +1351,7 @@
            LÓGICA DO FORMULÁRIO MULTI-STEP
            ========================================== */
         let currentStep = 1;
-        const totalSteps = 5;
+        const totalSteps = 2;
 
         function updateProgress() {
             const fill = document.getElementById('progressFill');
@@ -1525,76 +1389,10 @@
 
         function selectOption(value) {
             document.getElementById('interesse').value = value;
-            nextStep(2);
+            nextStep(5);
         }
 
-        /* ==========================================
-           CÁLCULO DINÂMICO DE PARCELAS 
-           ========================================== */
-        function calculateInstallments() {
-            const rawValue = document.getElementById('valorCredito').value;
-
-            if (!rawValue || rawValue === 'R$ ' || rawValue === '') {
-                alert('Por favor, informe o valor do crédito desejado antes de avançar.');
-                return;
-            }
-
-            let cleanValue = rawValue.replace(/[R$\s.]/g, '').replace(',', '.');
-            let creditAmount = parseFloat(cleanValue);
-
-            if (isNaN(creditAmount) || creditAmount <= 0) return;
-
-            const interest = document.getElementById('interesse').value;
-            let percentages = [];
-
-            if (interest === 'Veículo') {
-                percentages = [0.0070, 0.0085, 0.0100, 0.0115];
-            } else if (interest === 'Imóvel') {
-                percentages = [0.0030, 0.0040, 0.0050, 0.0070];
-            } else {
-                percentages = [0.0050, 0.00625, 0.0075, 0.00925];
-            }
-
-            const optionsContainer = document.getElementById('installmentOptionsGrid');
-            optionsContainer.innerHTML = '';
-
-            percentages.forEach(p => {
-                let instValue = creditAmount * p;
-                let formattedValue = instValue.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-
-                let btn = document.createElement('div');
-                btn.className = 'option-btn';
-                btn.innerHTML = `<strong>${formattedValue}</strong> /mês`;
-                btn.onclick = () => selectInstallment(formattedValue);
-                optionsContainer.appendChild(btn);
-            });
-
-            nextStep(3);
-        }
-
-        function selectInstallment(value) {
-            document.getElementById('valorParcelaSelecionado').value = value;
-            nextStep(4);
-        }
-
-        function selectRadio(group, value) {
-            document.getElementById('reservaLance').value = value;
-            document.getElementById('reservaSim').classList.remove('selected');
-            document.getElementById('reservaNao').classList.remove('selected');
-
-            const grupoValorLance = document.getElementById('grupoValorLance');
-
-            if (value === 'Sim') {
-                document.getElementById('reservaSim').classList.add('selected');
-                grupoValorLance.style.display = 'block';
-            } else {
-                document.getElementById('reservaNao').classList.add('selected');
-                grupoValorLance.style.display = 'none';
-                document.getElementById('valorLanceAproximado').value = '';
-            }
-        }
-
-        // FETCH PARA O CRM PRESERVANDO A ROTA /SIMULAR/
+        // FETCH PARA O CRM
         document.getElementById('simulacaoForm').addEventListener('submit', function (e) {
             e.preventDefault();
 
@@ -1603,24 +1401,16 @@
             btnSubmit.innerHTML = 'ENVIANDO...';
             btnSubmit.disabled = true;
 
-            let valorSujo = document.getElementById('valorCredito').value;
-            let valorLimpo = parseFloat(valorSujo.replace(/[R$\s.]/g, '').replace(',', '.'));
             const produtoSelecionado = document.getElementById('interesse').value || "Consórcio";
-
-            let lanceTexto = document.getElementById('reservaLance').value;
-            if (lanceTexto === 'Sim') {
-                const valorLanceExato = document.getElementById('valorLanceAproximado').value || 'Não informado';
-                lanceTexto = `Sim (${valorLanceExato})`;
-            }
 
             const payload = {
                 cliente_nome: document.getElementById('nome').value,
                 cliente_whats: document.getElementById('whatsapp').value,
                 cliente_email: document.getElementById('email').value,
                 tipo_credito: produtoSelecionado,
-                valor_credito: isNaN(valorLimpo) ? 0 : valorLimpo,
+                valor_credito: 0,
                 usuario_id: 2,
-                observacoes: `Parcela: ${document.getElementById('valorParcelaSelecionado').value} | Profissão: ${document.getElementById('profissao').value} | Renda: ${document.getElementById('renda').value} | Lance: ${lanceTexto}`,
+                observacoes: `Profissão: ${document.getElementById('profissao').value} | Renda: ${document.getElementById('renda').value}`,
                 dados_adicionais: { origem: "Site Oficial Multi-Step" }
             };
 
@@ -1633,18 +1423,14 @@
                 body: JSON.stringify(payload)
             })
                 .then(async response => {
-                    dispararPixelLeadSucesso(valorLimpo);
+                    dispararPixelLeadSucesso(0);
 
                     const numPai = "5531998917185";
                     const msgWhatsApp = `Vim através do site! (${produtoSelecionado.toLowerCase()})`;
                     const msg = encodeURIComponent(msgWhatsApp);
                     document.getElementById('btn-whats-direto').href = `https://wa.me/${numPai}?text=${msg}`;
 
-                    if (response.ok || response.status === 200) {
-                        showStep(6);
-                    } else {
-                        showStep(6);
-                    }
+                    showStep(6);
                 })
                 .catch(error => {
                     console.error('Erro ao conectar com o CRM:', error);
@@ -1661,15 +1447,7 @@
 
         function resetForm() {
             document.getElementById('simulacaoForm').reset();
-            document.getElementById('reservaSim').classList.remove('selected');
-            document.getElementById('reservaNao').classList.remove('selected');
             document.getElementById('interesse').value = '';
-            document.getElementById('valorParcelaSelecionado').value = '';
-            document.getElementById('reservaLance').value = '';
-
-            document.getElementById('grupoValorLance').style.display = 'none';
-            document.getElementById('valorLanceAproximado').value = '';
-
             document.getElementById('progressBarContainer').style.display = 'block';
             document.querySelector('.form-box h2').style.display = 'block';
             document.querySelector('.form-sub').style.display = 'block';
@@ -1701,7 +1479,7 @@
             }
         });
 
-        // Lógica do Carrossel blindada (Anti-Spam e Limites Matemáticos)
+        // Lógica do Carrossel
         const track = document.getElementById('track-depoimentos');
         const btnPrev = document.getElementById('btnPrev');
         const btnNext = document.getElementById('btnNext');
