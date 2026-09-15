@@ -84,15 +84,36 @@
         /* --- HERO SECTION --- */
         .hero {
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(20, 0, 0, 0.8) 100%);
-            background-size: cover;
-            background-position: center;
             padding: 80px 5% 60px 5%;
             display: flex;
             flex-wrap: wrap;
-            align-items: flex-start;
+            align-items: center; /* Ajustado de flex-start para center para alinhar melhor o conteúdo e o form */
             justify-content: center;
             gap: 40px;
             min-height: 90vh;
+            position: relative; /* Essencial para conter as imagens de fundo absolutas */
+            overflow: hidden; /* Esconde qualquer excesso de imagem */
+        }
+
+        /* --- CORREÇÃO DAS IMAGENS DE FUNDO DO HERO --- */
+        .hero-bg-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+            opacity: 0.35; /* Deixa a imagem como um fundo sutil escurecido para destacar o texto */
+            pointer-events: none;
+        }
+
+        .hero-desktop {
+            display: block;
+        }
+
+        .hero-mobile {
+            display: none;
         }
 
         .hero-content {
@@ -100,6 +121,8 @@
             min-width: 300px;
             color: white;
             padding-top: 10px;
+            position: relative; /* Garante que o texto fique acima da imagem de fundo */
+            z-index: 1;
         }
 
         .tag-hero {
@@ -949,6 +972,14 @@
 
         /* Ajuste específico para Celular */
         @media (max-width: 768px) {
+            .hero-desktop {
+                display: none;
+            }
+
+            .hero-mobile {
+                display: block;
+            }
+
             .hero {
                 padding-top: 80px;
                 text-align: center;
@@ -979,6 +1010,8 @@
 
             .form-box {
                 margin-top: 20px;
+                position: relative;
+                z-index: 1;
             }
         }
     </style>
@@ -992,6 +1025,12 @@
     </header>
 
     <section class="hero">
+        <!-- Imagem de fundo que aparece SÓ NO PC (horizontal) -->
+        <img src="img/imovelpc.webp" alt="Imóvel em destaque" class="hero-bg-img hero-desktop">
+
+        <!-- Imagem de fundo que aparece SÓ NO CELULAR (vertical) -->
+        <img src="img/imovelmobile.webp" alt="Imóvel em destaque" class="hero-bg-img hero-mobile">
+
         <div class="hero-content">
             <span class="tag-hero">Atendimento em Todo Brasil e Exterior</span>
             <h1 style="font-size: 32px; line-height: 1.3;">
@@ -999,7 +1038,6 @@
                 <span style="color: var(--primary); font-weight: 900;">e não com juros!</span>
             </h1>
             <p>Descubra como conquistar seu patrimônio com as menores taxas do mercado.</p>
-
         </div>
 
         <div class="form-box" id="simular">
