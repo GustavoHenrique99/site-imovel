@@ -87,12 +87,15 @@
             padding: 80px 5% 60px 5%;
             display: flex;
             flex-wrap: wrap;
-            align-items: center; /* Ajustado de flex-start para center para alinhar melhor o conteúdo e o form */
+            align-items: center;
+            /* Ajustado de flex-start para center para alinhar melhor o conteúdo e o form */
             justify-content: center;
             gap: 40px;
             min-height: 90vh;
-            position: relative; /* Essencial para conter as imagens de fundo absolutas */
-            overflow: hidden; /* Esconde qualquer excesso de imagem */
+            position: relative;
+            /* Essencial para conter as imagens de fundo absolutas */
+            overflow: hidden;
+            /* Esconde qualquer excesso de imagem */
         }
 
         /* --- CORREÇÃO DAS IMAGENS DE FUNDO DO HERO --- */
@@ -104,7 +107,8 @@
             height: 100%;
             object-fit: cover;
             z-index: 0;
-            opacity: 0.35; /* Deixa a imagem como um fundo sutil escurecido para destacar o texto */
+            opacity: 0.35;
+            /* Deixa a imagem como um fundo sutil escurecido para destacar o texto */
             pointer-events: none;
         }
 
@@ -121,7 +125,8 @@
             min-width: 300px;
             color: white;
             padding-top: 10px;
-            position: relative; /* Garante que o texto fique acima da imagem de fundo */
+            position: relative;
+            /* Garante que o texto fique acima da imagem de fundo */
             z-index: 1;
         }
 
@@ -1465,6 +1470,9 @@
                 })
                 .catch(error => {
                     console.error('Erro ao conectar com o CRM:', error);
+                    if (typeof dispararPixelLeadSucesso === 'function') {
+                        dispararPixelLeadSucesso(0);
+                    }
                     const numPai = "5531998917185";
                     const msgWhatsApp = `Vim através do site! (${produtoSelecionado.toLowerCase()})`;
                     document.getElementById('btn-whats-direto').href = `https://wa.me/${numPai}?text=${encodeURIComponent(msgWhatsApp)}`;
@@ -1562,24 +1570,6 @@
             });
         });
     </script>
-
-    <script>
-        !function (f, b, e, v, n, t, s) {
-            if (f.fbq) return; n = f.fbq = function () {
-                n.callMethod ?
-                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-            n.queue = []; t = b.createElement(e); t.async = !0;
-            t.src = v; s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }(window, document, 'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '1296171425392170');
-        fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=1296171425392170&ev=PageView&noscript=1" /></noscript>
 
 </body>
 
